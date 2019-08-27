@@ -15,6 +15,10 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
+
+import iconConfig from './selection.json';
+const IcoMoonIcon = createIconSetFromIcoMoon(iconConfig);
 
 
 export const App = () => {
@@ -26,29 +30,7 @@ export const App = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
+            <IcoMoonIcon name="wedding" size={200} />
           </View>
         </ScrollView>
       </SafeAreaView>

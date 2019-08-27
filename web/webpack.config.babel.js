@@ -88,10 +88,6 @@ module.exports = {
       'process.env.PUBLIC_PATH': JSON.stringify(publicPath),
       __DEV__: JSON.stringify(isDev),
     }),
-    new CopyWebpackPlugin(
-      [
-      ].filter(Boolean)
-    ),
     new HtmlWebpackPlugin({
       title: 'RNW',
       filename: 'index.html',
@@ -105,8 +101,6 @@ module.exports = {
       theme_color: '#43d2fc',
       lang: 'en-US',
       orientation: 'portrait-primary',
-      icons: [
-      ],
       ios: true,
     }),
   ].filter(Boolean),
